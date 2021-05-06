@@ -11,7 +11,9 @@ Screen resolution better than 1200x800.
 
 For details see [requirements.txt](/requirements.txt)
 ## Installation
-Just clone this repository or download all files with a source code.
+If you have Python and required libraries installed, just clone this repository or download all files with a source code.
+
+If you have no Python and do not intend to install it, download [.zip archive](https://github.com/Yuri-V-Petrov/SEMsimulator/releases/download/untagged-e8b1af07124208526fe9/SEMsimulator_1.0_win64.zip) (version for 64-bit Windows10) and extract files.
 ## Image preparation
 Since this simulator interactively processes images, previously captured by real scanning electron microscope, folder with images is required as well. 
 
@@ -36,7 +38,7 @@ File structure example:
         |-- Sample 2
         ... ...
 ```
-By default the script searces for "Images" folder within the folder of its location, but you can specify another location using `PATH_TO_IMAGES` variable in [`simulator_main.py`](/source%20code/simulator_main.py).
+By default the script searces for "Images" folder within the folder of its location, but you can specify another location using `PATH_TO_IMAGES` variable in [`simulator_main.py`](/source_code/simulator_main.py).
 
 Images folder with sample for testing is included.
 ## Using simulator
@@ -44,10 +46,12 @@ Images folder with sample for testing is included.
 In `simulator_main.py`use `PATH_TO_IMAGES` to show, where the images are located, `HV_TARGET` to specify accelerating voltage in kV, which was used for image acquisition, 
 and `SCREEN_WIDTH` for the halfwidth of real microscope screen in mm. The last parameter is used for calibration of pixel size in image, by default it equals 57.15 mm that corresponds to 4.5-inch-wide screen.
 
-Besides abovementioned parameters, some other parameters of the microscope can be specified using `Microscope` class of the [`microscope` module](https://github.com/Yuri-V-Petrov/SEMsimulator/blob/main/source%20code/microscope.py) module.
+Besides abovementioned parameters, some other parameters of the microscope can be specified using `Microscope` class of the [`microscope` module](https://github.com/Yuri-V-Petrov/SEMsimulator/blob/main/source_code/microscope.py) module.
 
 ### Running the code
-Start `simulator_main.py`script to open microscope main window.
+If you use the source code in your environment, start `simulator_main.py`script, which opens microscope main window.
+
+If you use win64 version extracted from .zip archive, just double click `run_simulator.cmd`.
 
 <img src= "/microscope_window.png" width="500">
 
@@ -58,4 +62,4 @@ Keep in mind that not whole image is represented during scanning, but its 512x38
 <img src= "/image.png" width="200">
 
 When focusing is finished, image can be saved using `Save` menu in the top left corner. Besides .PNG image, params.txt file is saved nearby. 
-The first line of this .txt file contains attributes of `Beam` class (see [`beam_calculation` module](/source%20code/beam_calculation.py)). The second line contains beam halfwidths in nm.
+The first line of this .txt file contains attributes of `Beam` class (see [`beam_calculation` module](/source_code/beam_calculation.py)). The second line contains beam halfwidths in nm.
