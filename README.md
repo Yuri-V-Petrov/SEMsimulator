@@ -13,7 +13,7 @@ For details see [requirements.txt](/requirements.txt)
 ## Installation
 If you have Python and required libraries installed, just clone this repository or download all files with a source code.
 
-If you have no Python and do not intend to install it, download [.zip archive](https://github.com/Yuri-V-Petrov/SEMsimulator/releases/download/untagged-e8b1af07124208526fe9/SEMsimulator_1.0_win64.zip) (version for 64-bit Windows10) and extract files.
+If you have no Python and do not intend to install it, download [.zip archive](https://github.com/Yuri-V-Petrov/SEMsimulator/releases/download/1.0/SEMsimulator_1.0_win64.zip) (version for 64-bit Windows10) and extract files.
 ## Image preparation
 Since this simulator interactively processes images, previously captured by real scanning electron microscope, folder with images is required as well. 
 
@@ -46,7 +46,7 @@ Images folder with sample for testing is included.
 In `simulator_main.py`use `PATH_TO_IMAGES` to show, where the images are located, `HV_TARGET` to specify accelerating voltage in kV, which was used for image acquisition, 
 and `SCREEN_WIDTH` for the halfwidth of real microscope screen in mm. The last parameter is used for calibration of pixel size in image, by default it equals 57.15 mm that corresponds to 4.5-inch-wide screen.
 
-Besides abovementioned parameters, some other parameters of the microscope can be specified using `Microscope` class of the [`microscope` module](https://github.com/Yuri-V-Petrov/SEMsimulator/blob/main/source_code/microscope.py) module.
+Besides abovementioned parameters, some other parameters of the microscope can be specified using `Microscope` class of the [`microscope` module](https://github.com/Yuri-V-Petrov/SEMsimulator/blob/main/source_code/microscope.py).
 
 ### Running the code
 If you use the source code in your environment, start `simulator_main.py`script, which opens microscope main window.
